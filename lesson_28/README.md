@@ -1,0 +1,2 @@
+- configured the c++ compiller
+- created first script
