@@ -4,6 +4,8 @@
  * Declaring and using constants
  * 
  * Clculator of price for the room service.
+ * 
+ * Clculator of price for the room service.
  */
 
 #include <iostream>
@@ -14,13 +16,13 @@ int main()
 {
     const double PRICE_PER_SMALL_ROOM{25.0};
     const double PRICE_PER_LARGE_ROOM{35.0};
-    const int ESTIMATE_EXPARY = {30};
+    const int ESTIMATE_EXPIRY = {30};
     const int MIN_ROOMS_PER_ORDER = {1};
     const double SALES_TAX = {0.06};
 
     int number_of_small_rooms{0};
     int number_of_large_rooms{0};
-    int main_price{0};
+    double main_price{0};
 
     cout << "Hello welcome to Frank's Carpet Cleaning Service" << endl;
 
@@ -60,7 +62,7 @@ int main()
     cout << "=================" << endl;
 
     cout << "✓ Total estimate: " << main_price + total_tax << "$" << endl;
-    cout << "☞ This estimate is valid for: " << ESTIMATE_EXPARY << " days ⌛" << endl;
+    cout << "☞ This estimate is valid for: " << ESTIMATE_EXPIRY << " days ⌛" << endl;
 
     return 0;
 }
