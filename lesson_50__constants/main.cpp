@@ -4,8 +4,6 @@
  * Declaring and using constants
  * 
  * Clculator of price for the room service.
- * 
- * Clculator of price for the room service.
  */
 
 #include <iostream>
