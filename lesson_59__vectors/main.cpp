@@ -60,11 +60,11 @@ int main()
     cout << "Third vector_2d.at(1).at(0): " << vector_2d.at(1).at(0) << endl;
     cout << "Fourth vector_2d.at(1).at(1): " << vector_2d.at(1).at(1) << endl;
 
-    cout << "\n=== vector_2d modified ===" << endl;
-    vector_2d.at(0).at(0) = 1000;
-    vector_2d.at(0).at(1) = 2000;
-    vector_2d.at(1).at(0) = 3000;
-    vector_2d.at(1).at(1) = 4000;
+    cout << "\n=== vectors modified ===" << endl;
+    vector_1.at(0) = 1000;
+    vector_1.at(1) = 2000;
+    vector_2.at(0) = 3000;
+    vector_2.at(1) = 4000;
     cout << "First vector_2d.at(0).at(0): " << vector_2d.at(0).at(0) << endl;
     cout << "Second vector_2d.at(0).at(1): " << vector_2d.at(0).at(1) << endl;
     cout << "Third vector_2d.at(1).at(0): " << vector_2d.at(1).at(0) << endl;
