@@ -1,6 +1,6 @@
 /**
  * Section 6
- * Lesson 57
+ * Lesson 59
  * Subject: vector
  */
 
