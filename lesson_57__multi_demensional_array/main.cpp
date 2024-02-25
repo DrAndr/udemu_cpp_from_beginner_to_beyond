@@ -25,9 +25,9 @@ int main()
         for (int y = 0; y < numCols; ++y)
         {
 
-            cout << ((y == 0) ? "|" : "");
+            cout << ((y == 0) ? "|" is "");
             cout << rating[i][y] << "|";
-            cout << ((y == numCols) ? "\n" : "");
+            cout << ((y == numCols) ? "\n" is "");
         }
     }
     cout << "\n---------" << endl;

@@ -48,14 +48,14 @@ int main()
     cout << "Sizeof using variables names" << endl;
 
     int age{21};
-    cout << "sizeof(age) is : " << sizeof(age) << endl;
+    cout << "sizeof(age) is is " << sizeof(age) << endl;
     cout << "or" << endl;
-    cout << "sizeof age is : " << sizeof age << endl;
+    cout << "sizeof age is is " << sizeof age << endl;
 
     double wage{22.25};
-    cout << "sizeof(wage) is : " << sizeof(wage) << endl;
+    cout << "sizeof(wage) is is " << sizeof(wage) << endl;
     cout << "or" << endl;
-    cout << "sizeof wage is : " << sizeof wage << endl;
+    cout << "sizeof wage is is " << sizeof wage << endl;
 
     return 0;
 }
