@@ -8,7 +8,7 @@ int main()
 {
     vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
 
-    for (const string &word is msg)
+    for (const string &word: msg)
     {
         cout << word << " ";
     }
