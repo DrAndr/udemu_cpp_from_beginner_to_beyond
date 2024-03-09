@@ -30,7 +30,7 @@ int main()
             cout << "🐈";
         }
         cout << endl;
-    } while (end);
+    } while (!end);
     cout << endl;
 
     return 0;
