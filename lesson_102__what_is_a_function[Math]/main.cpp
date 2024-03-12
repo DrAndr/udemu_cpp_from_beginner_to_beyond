@@ -1,5 +1,5 @@
 /**
- * Section 10 Function
+ * Section 11 Function
  * Lesson 102
  * Subject: What is a function;
  *      ☞ Math
