@@ -3,7 +3,7 @@
  * Exercise 31
  * Subject: Pointers and references
  *
- * Problem Title: Swap Values using Pointers
+ * Problem :
  *      Pointers are a fundamental aspect of C++.
  *      They allow for flexible and efficient programming by
  *      giving direct access to memory. You are tasked with
