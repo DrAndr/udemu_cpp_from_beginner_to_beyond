@@ -10,7 +10,7 @@
 using namespace std;
 
 void print(int[], size_t);
-int *apply_all(int[], size_t, int[], size_t);
+int *apply_all(const int *const, size_t, const int *const, size_t);
 
 int main()
 {
@@ -40,11 +40,11 @@ void print(int arr[], size_t size)
     for (size_t i{0}; i < size; i++)
         cout << arr[i] << " ";
 
-    cout << " ]";
+    cout << "]";
     cout << endl;
 }
 
-int *apply_all(int arr_1[], size_t size_1, int arr_2[], size_t size_2)
+int *apply_all(const int *const arr_1, size_t size_1, const int *const arr_2, size_t size_2)
 {
     int *result{nullptr}; // init pointer
     result = new int[size_1 * size_2]; // define array length
