@@ -12,6 +12,11 @@ using namespace std;
 
 class Player
 {
+    /*
+     * by default all attributes and methods is private
+     */
+
+public: // after this modifier, all attributes and methods will be public
     // attributes
     string name{"Player"};
     int helth{100};
@@ -42,6 +47,21 @@ int main()
 
     Player frank; // object
     Player hero;
+
+    cout << "----- Default params ------" << endl;
+
+    cout << "Name: " + frank.name << endl;    // Player
+    cout << "Helth: " << frank.helth << endl; // 100
+    cout << "Xp: " << frank.xp << endl;       // 0
+
+    cout << "----- Updated params ------" << endl;
+    
+    frank.name = "Frank";
+    frank.helth = 200;
+    frank.xp = 100;
+    cout << "Name: " + frank.name << endl;    // Frank
+    cout << "Helth: " << frank.helth << endl; // 200
+    cout << "Xp: " << frank.xp << endl;       // 100
 
     // ------------------
 
