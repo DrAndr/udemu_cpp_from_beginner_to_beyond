@@ -23,7 +23,13 @@ public: // after this modifier, all attributes and methods will be public
     int xp{};
 
     // methods
-    void talk(string);
+    // void talk(string);
+
+    void talk(string message)
+    {
+        cout << name << " says: " << message << endl;
+        return;
+    }
     bool is_alive();
 };
 
@@ -55,13 +61,17 @@ int main()
     cout << "Xp: " << frank.xp << endl;       // 0
 
     cout << "----- Updated params ------" << endl;
-    
+
     frank.name = "Frank";
     frank.helth = 200;
     frank.xp = 100;
     cout << "Name: " + frank.name << endl;    // Frank
     cout << "Helth: " << frank.helth << endl; // 200
     cout << "Xp: " << frank.xp << endl;       // 100
+
+    cout << "----- Methods usage ------" << endl;
+
+    frank.talk("Hi there!"); 
 
     // ------------------
 
@@ -74,9 +84,16 @@ int main()
 
     // ------------------
 
-    // create object on heap
+    // create object on heap [pointer]
     Player *enemy{nullptr};
     enemy = new Player;
+    
+    (*enemy).name =  "Enemy";
+    // OR other sintaxis:
+    enemy->helth = 300;
+    enemy->xp = 500;
+
+    enemy->talk("I'll destroy you!");
 
     // ...
 
