@@ -22,11 +22,27 @@
 
 #include <iostream>
 
+#include "Dog.h"
+
 using namespace std;
 
+Dog test_dog();
 int main()
 {
+    Dog pet;
+    pet = test_dog();
+
+    cout << "Our pet has name " << pet.name << ", and hi's age is " << pet.age << " years." << endl;
 
     cout << endl;
     return 0;
+}
+
+Dog test_dog()
+{
+    Dog spot;
+    spot.name = "Spot";
+    spot.age = 5;
+
+    return spot;
 }
