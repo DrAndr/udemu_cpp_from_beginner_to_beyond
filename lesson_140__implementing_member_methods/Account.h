@@ -1,3 +1,6 @@
+#ifndef _ACCOUNT_H_
+#define _ACCOUNT_H_
+
 #include <iostream>
 #include <string>
 
@@ -22,3 +25,5 @@ public:
     bool withdraw(double);
     bool deposit(double);
 };
+
+#endif
