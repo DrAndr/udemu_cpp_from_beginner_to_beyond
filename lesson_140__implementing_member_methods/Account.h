@@ -4,13 +4,11 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 class Account
 {
 private:
     // attributes
-    string name{"Costumer"};
+    std::string name{"Costumer"};
     double balance{};
 
 public:
@@ -19,8 +17,8 @@ public:
     double get_balance() { return balance; }
 
     // This methods will be defined outside the class declaration
-    void set_name(string n);
-    string get_name();
+    void set_name(std::string n);
+    std::string get_name();
 
     bool withdraw(double);
     bool deposit(double);
