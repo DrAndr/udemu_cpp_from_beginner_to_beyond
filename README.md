@@ -14,8 +14,3 @@ This repository contains practical lessons from the course
  - Includes Quizzes, Live Coding Exercises, Challenge Coding Exercises and Assignments
  - New Section: Learn to use Visual Studio Code with C++
  - New Section: Learn all about using C++ Lambda Expressions
-
-### ☞ Links:
-
-[My publuck profile on the udemy](https://www.udemy.com/user/andrey-y-4/)
-
