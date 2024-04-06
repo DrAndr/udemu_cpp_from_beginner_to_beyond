@@ -14,41 +14,40 @@
 #include "Account.h"
 // #include "Account.cpp" // TODO resolve via IDE settings DONE
 
-/**
- Args for the Tasks.json
 
-{
-	"tasks": [
-		{
-		    "type": "cppbuild",
-		    "label": "C/C++: clang++ сборка активного файла",
-		    "command": "/usr/bin/clang++",
-		    "args": [
-		        "-fcolor-diagnostics",
-		        "-fansi-escape-codes",
-	ADDED --->  "-Wall", // notification hightlighting
-	ADDED --->  "-std=c++17", // define version
-		        "-g",
-	ADDED --->  "${fileDirname}/*.cpp", // say to take all .cpp file for 
-		        "-o",
-		        "${fileDirname}/${fileBasenameNoExtension}.o"
-		    ],
-		    "options": {
-		        "cwd": "${fileDirname}"
-		    },
-		    "problemMatcher": [
-		        "$gcc"
-		    ],
-		    "group": {
-		        "kind": "build",
-		        "isDefault": true
-		    },
-		    "detail": "Задача создана отладчиком."
-		},
-	],
-	"version": "2.0.0"
-}
-*/
+//  Args for the Tasks.json
+
+// {
+// 	"tasks": [
+// 		{
+// 		    "type": "cppbuild",
+// 		    "label": "C/C++: clang++ сборка активного файла",
+// 		    "command": "/usr/bin/clang++",
+// 		    "args": [
+// 		        "-fcolor-diagnostics",
+// 		        "-fansi-escape-codes",
+// 	ADDED --->  "-Wall", // notification hightlighting
+// 	ADDED --->  "-std=c++17", // define version
+// 		        "-g",
+// 	ADDED --->  "${fileDirname}/*.cpp", // say to take all .cpp file for 
+// 		        "-o",
+// 		        "${fileDirname}/${fileBasenameNoExtension}.o"
+// 		    ],
+// 		    "options": {
+// 		        "cwd": "${fileDirname}"
+// 		    },
+// 		    "problemMatcher": [
+// 		        "$gcc"
+// 		    ],
+// 		    "group": {
+// 		        "kind": "build",
+// 		        "isDefault": true
+// 		    },
+// 		    "detail": "Задача создана отладчиком."
+// 		},
+// 	],
+// 	"version": "2.0.0"
+// }
 
 using namespace std;
 
