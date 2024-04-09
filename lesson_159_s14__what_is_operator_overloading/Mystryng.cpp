@@ -37,3 +37,22 @@ int Mystring::get_length() const { return strlen(str); }
 const char *Mystring::get_str() const { return str; }
 
 Mystring::~Mystring() { delete[] str; }
+
+// region [ Overloading Assignment Operator ]
+Mystring &Mystring::operator=(const Mystring &rhs /* rhs - refers to right hand side */)
+{
+    cout << "Overloading Assignment Operator..." << endl;
+
+    if (this == &rhs)
+        return *this;
+
+    // ELSE : remove old str,
+    delete[] this->str;
+    // create new,
+    this->str = new char[strlen(rhs.str) + 1];
+    // and assigne new value
+    strcpy(this->str, rhs.str);
+
+    return *this;
+}
+// endregion
