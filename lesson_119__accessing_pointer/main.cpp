@@ -18,6 +18,7 @@ int main()
     cout << "Size of 'p' is: " << sizeof p << endl; // 8
     p = nullptr;
     cout << "Now value of 'p' is: " << p << endl; // 0x0
+    // cout << "Now value of '*p' is: " << *p << endl; //[1] 60582 segmentation fault  ./main.o
 
     cout << "====================" << endl;
 
@@ -34,13 +35,18 @@ int main()
     cout << "====================" << endl;
 
     int score{10};
-    double high_temp{100.7};
-
     int *scor_ptr{nullptr};
+
+    // scor_ptr = 0x7ff7b5a1d510
     scor_ptr = &score;
-    cout << "Value of 'score' is: " << score << endl;       // 0x1f
-    cout << "Address of 'score' is: " << &score << endl;    // 0x7ff7b5a1d510
-    cout << "Value of 'scor_ptr' is: " << scor_ptr << endl; // 8
+    /*
+    Now scor_ptr == 0x7ff7b5a1d510
+    And *scor_ptr == 10
+    */
+    cout << "Value of 'score' is: " << score << endl;         // 10
+    cout << "Address of 'score' is: " << &score << endl;      // 0x7ff7be66b4b4
+    cout << "Value of '*scor_ptr' is: " << *scor_ptr << endl; // 10
+    cout << "Address of 'scor_ptr' is: " << scor_ptr << endl; // 0x7ff7be66b4b4
 
     // scor_ptr = &high_temp;    // Error, cant assigne double var to _ptr of the int type
 
