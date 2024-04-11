@@ -93,6 +93,10 @@ Mystring Mystring::operator-() const
         temp[i] = tolower(temp[i]);
 
     Mystring newObj{temp};
-
+    delete[] temp; // deallocate memory
     return newObj;
 };
+
+bool Mystring::operator==(const Mystring &rhs) const { return strcmp(rhs.str, this->str) == 0; };
+
+bool Mystring::operator!=(const Mystring &rhs) const { return strcmp(rhs.str, this->str) != 0; };

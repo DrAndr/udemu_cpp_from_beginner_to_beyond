@@ -22,6 +22,8 @@ public:
     // Move assignment
     Mystring &operator=(Mystring &&rhs);
     Mystring operator-() const;
+    bool operator==(const Mystring &rhs) const;
+    bool operator!=(const Mystring &rhs) const;
 
     void display();
     int get_length() const;
