@@ -37,7 +37,8 @@ Mystring::Mystring(Mystring &&source) : str{source.str}
     cout << "Move Constructor used;" << endl;
 }
 
-void Mystring::display() { cout << str << " : " << this->get_length() << endl; }
+void Mystring::display() { cout << str; }
+void Mystring::printStrInfo() { cout << str << " : " << this->get_length() << endl; }
 
 int Mystring::get_length() const { return strlen(str); }
 
@@ -84,6 +85,17 @@ Mystring &Mystring::operator=(Mystring &&rhs)
 
     return *this; // any where we should return pointer on this obj
 }
+
+Mystring Mystring::operator+(const Mystring &rhs)const
+{
+    char *newStr = new char[strlen(this->str) + strlen(rhs.str) + 1];
+    strcpy(newStr, this->str); // add left val
+    strcat(newStr, rhs.str);   // add right value
+
+    Mystring newObj{newStr};
+    delete[] newStr;
+    return newObj;
+};
 
 Mystring Mystring::operator-() const
 {

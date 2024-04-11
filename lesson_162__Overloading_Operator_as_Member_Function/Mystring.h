@@ -21,11 +21,13 @@ public:
 
     // Move assignment
     Mystring &operator=(Mystring &&rhs);
+    Mystring operator+(const Mystring &rhs) const;
     Mystring operator-() const;
     bool operator==(const Mystring &rhs) const;
     bool operator!=(const Mystring &rhs) const;
 
     void display();
+    void printStrInfo();
     int get_length() const;
     const char *get_str() const;
 };
