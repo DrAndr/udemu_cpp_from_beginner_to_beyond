@@ -34,12 +34,22 @@ int main()
     larry.display(); // Larry
     moe.display();   // Moe
 
-    // cout << (larry == moe) << endl;    // false
-    // cout << (larry == stooge) << endl; // true
+    cout << " \n--- Str to lowercase --- " << endl;
 
     larry.display(); // Larry
     Mystring larry_2 = -larry;
     larry_2.display(); // larry
+
+    cout << " \n--- Is equal \"==\" --- " << endl;
+    cout << "(larry == moe)____: " << (larry == moe) << endl;     // false
+    cout << "(larry == stooge)_: " << (larry == stooge) << endl;  // true
+    cout << "(larry == larry_2): " << (larry == larry_2) << endl; // false
+    cout << "(moe == \"Moe\")____: " << (moe == "Moe") << endl;   // true
+
+    cout << " \n--- Is not equal \"!=\" --- " << endl;
+    cout << "(moe != larry)____: " << (moe != larry) << endl;    // true
+    cout << "(larry != moe)____: " << (larry != moe) << endl;    // true
+    cout << "(larry != stooge)_: " << (larry != stooge) << endl; // false
 
     // Mystring stooges = larry + "Moe";
     // Mystring stooges = "Moe" + larry; // Compiler error
