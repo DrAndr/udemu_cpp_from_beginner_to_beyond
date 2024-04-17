@@ -13,7 +13,7 @@ class Mystring
     friend bool operator<(const Mystring &lhs, const Mystring &rhs);
 
     // Unary operators
-    friend Mystring operator-(Mystring obj);                             // to lowercase
+    friend Mystring operator-(const Mystring &obj);                      // to lowercase
     friend Mystring operator+(const Mystring &lhs, const Mystring &rhs); // concatenation
     friend Mystring &operator+=(Mystring &lhs, const Mystring &rhs);
     friend Mystring operator*(const Mystring &lhs, int);
