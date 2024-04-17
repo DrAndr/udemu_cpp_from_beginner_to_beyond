@@ -66,29 +66,18 @@ Mystring &Mystring::operator=(Mystring &&rhs)
 };
 
 // Operator Overloading definition [ as friends functions ]
-/*
+
 // comparing operators
-bool Mystring::operator==(const Mystring &rhs) const { return strcmp(this->str, rhs.str) == 0; };
-bool Mystring::operator!=(const Mystring &rhs) const { return strcmp(this->str, rhs.str) != 0; };
-bool Mystring::operator>(const Mystring &rhs) const { return strcmp(this->str, rhs.str) > 0; };
-bool Mystring::operator<(const Mystring &rhs) const { return strcmp(this->str, rhs.str) < 0; };
-
-
-{
-    if (this != &rhs) // compare links
-    {
-        delete[] str;
-        this->str = rhs.str;
-        rhs.str = nullptr;
-    }
-    return *this;
-};
+bool operator==(const Mystring &lhs, const Mystring &rhs) { return strcmp(lhs.str, rhs.str) == 0; };
+bool operator!=(const Mystring &lhs, const Mystring &rhs) { return strcmp(lhs.str, rhs.str) != 0; };
+bool operator>(const Mystring &lhs, const Mystring &rhs) { return strcmp(lhs.str, rhs.str) > 0; };
+bool operator<(const Mystring &lhs, const Mystring &rhs) { return strcmp(lhs.str, rhs.str) < 0; };
 
 // Unary operators overloading
-Mystring Mystring::operator-() const
+Mystring operator-(const Mystring &obj)
 {
-    char *temp = new char[std::strlen(this->str) + 1];
-    std::strcpy(temp, this->str);
+    char *temp = new char[std::strlen(obj.str) + 1];
+    std::strcpy(temp, obj.str);
     for (size_t i{0}; i < std::strlen(temp); i++)
         temp[i] = std::tolower(temp[i]);
     Mystring newObj{temp};
@@ -96,34 +85,34 @@ Mystring Mystring::operator-() const
     return newObj;
 };
 
-Mystring Mystring::operator+(const Mystring &rhs) const
+Mystring operator+(const Mystring &lhs, const Mystring &rhs)
 {
-    char *temp = new char[std::strlen(this->str) + std::strlen(rhs.str) + 1];
-    std::strcpy(temp, this->str);
+    char *temp = new char[std::strlen(lhs.str) + std::strlen(rhs.str) + 1];
+    std::strcpy(temp, lhs.str);
     std::strcat(temp, rhs.str);
     Mystring newObj{temp};
     delete[] temp;
     return newObj;
 };
 
-Mystring &Mystring::operator+=(const Mystring &rhs)
+Mystring &operator+=(Mystring &lhs, const Mystring &rhs)
 {
-    *this = *this + rhs;
-    return *this;
+    lhs = lhs + rhs;
+    return lhs;
 };
 
-Mystring Mystring::operator*(int n) const
+Mystring operator*(const Mystring &lhs, int n)
 {
     Mystring temp;
     for (int i = 1; i <= n; i++)
-        temp += *this; // OR temp = *this + temp;
+        temp += lhs; // OR temp = *this + temp;
     return temp;
 };
 
-Mystring &Mystring::operator*=(int n)
+Mystring &operator*=(Mystring &lhs, int n)
 {
-    *this = *this * n;
-    return *this;
+    lhs = lhs * n;
+    return lhs;
 };
 
 std::ostream &operator<<(std::ostream &os, const Mystring &rhs)
@@ -141,24 +130,22 @@ std::istream &operator>>(std::istream &in, Mystring &rhs)
     return in;
 };
 
-Mystring &Mystring::operator++()
+Mystring &operator++(Mystring &obj)
 {
-    for (size_t i = 0; i < std::strlen(str); i++)
-        str[i] = std::toupper(str[i]);
+    for (size_t i = 0; i < std::strlen(obj.str); i++)
+        obj.str[i] = std::toupper(obj.str[i]);
 
-    return *this;
+    return obj;
 };
 
-Mystring Mystring::operator++(int n)
-
+Mystring operator++(Mystring &obj, int n)
 {
-    Mystring temp(*this); // Usage COPY Constructor
+    Mystring temp(obj); // Usage COPY Constructor
 
-    operator++();
+    ++obj;
     // OR :
-    // for (size_t i = 0; i < std::strlen(str); i++)
-    //     str[i] = std::toupper(str[i]);
+    // for (size_t i = 0; i < std::strlen(obj.str); i++)
+    //     obj.str[i] = std::toupper(obj.str[i]);
 
     return temp;
 };
-*/
