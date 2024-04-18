@@ -2,11 +2,12 @@
 #define _SAVINGS_ACCOUNT_H_
 #include "Account.h"
 
-class Savings_Account: public Account
+class Savings_Account : public Account
 {
 private:
     /* data */
 public:
+    double int_rate;
     Savings_Account(/* args */);
     ~Savings_Account();
     void deposit(double ammount);
