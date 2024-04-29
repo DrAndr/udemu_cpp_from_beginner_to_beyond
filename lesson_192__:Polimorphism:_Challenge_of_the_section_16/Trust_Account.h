@@ -8,7 +8,7 @@
  */
 class Trust_Account : public Savings_Account
 {
-    friend std::ostream &operator<<(std::ostream &os, const Trust_Account &source);
+    // friend std::ostream &operator<<(std::ostream &os, const Trust_Account &source);
 
 private:
     int withdraw_counter{0};
@@ -24,6 +24,8 @@ public:
     virtual bool withdraw(double ammount) override;
     virtual double get_balance() const override;
     void set_limit_rate(double limit_rate);
+
+    virtual void print(std::ostream &os) const override;
 };
 
 #endif // _TRUST_ACCOUNT_H_

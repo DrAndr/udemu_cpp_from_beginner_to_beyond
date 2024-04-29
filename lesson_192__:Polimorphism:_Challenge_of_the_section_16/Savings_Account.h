@@ -9,7 +9,7 @@
  */
 class Savings_Account : public Account
 {
-    friend std::ostream &operator<<(std::ostream &os, const Savings_Account &source);
+    // friend std::ostream &operator<<(std::ostream &os, const Savings_Account &source);
 
 private:
 protected:
@@ -21,9 +21,11 @@ protected:
 public:
     Savings_Account(std::string name = default_name, double balance = default_balance, double int_rate = default_int_rate);
     virtual ~Savings_Account() = default;
-    virtual bool deposit(double ammount)override;
-    virtual bool withdraw(double ammount)override;
+    virtual bool deposit(double ammount) override;
+    virtual bool withdraw(double ammount) override;
     virtual double get_balance() const override;
+
+    virtual void print(std::ostream &os) const override;
 };
 
 #endif // _SAVINGS_ACCOUNT_H_

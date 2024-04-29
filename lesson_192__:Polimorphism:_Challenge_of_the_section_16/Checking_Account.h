@@ -7,7 +7,7 @@
  */
 class Checking_Account : public Account
 {
-    friend std::ostream &operator<<(std::ostream &os, const Checking_Account &source);
+    // friend std::ostream &operator<<(std::ostream &os, const Checking_Account &source);
 
 private:
     static constexpr const char *default_name = "Unnamed Saving Account";
@@ -23,6 +23,8 @@ public:
     virtual bool deposit(double ammount) override; // derived from the Seper Class
     virtual bool withdraw(double ammount) override;
     virtual double get_balance() const override;
+
+    virtual void print(std::ostream &os) const override;
 };
 
 #endif // _CHECKING_ACCOUNT_H_

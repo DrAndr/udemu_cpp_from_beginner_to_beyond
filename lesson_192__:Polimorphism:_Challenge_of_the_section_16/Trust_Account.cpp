@@ -28,9 +28,15 @@ bool Trust_Account::withdraw(double ammount)
 }
 double Trust_Account::get_balance() const { return Account::get_balance(); }
 void Trust_Account::set_limit_rate(double limit_rate) { this->limit_rate = limit_rate; }
-
-std::ostream &operator<<(std::ostream &os, const Trust_Account &source)
+void Trust_Account::print(std::ostream &os) const
 {
-    os << "[Trust_accoutn: " << source.name << " : " << source.balance << ", int rate: " << source.int_rate << "%] ";
-    return os;
-}
+    os.precision(2);
+    os << std::fixed;
+    os << "[Trust_accoutn: " << name << " : " << balance << ", int rate: " << int_rate << "%]; ";
+};
+
+// std::ostream &operator<<(std::ostream &os, const Trust_Account &source)
+// {
+//     os << "[Trust_accoutn: " << source.name << " : " << source.balance << ", int rate: " << source.int_rate << "%] ";
+//     return os;
+// }
