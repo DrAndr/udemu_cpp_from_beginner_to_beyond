@@ -14,7 +14,7 @@
 #include "Checking_Account.h"
 #include "Trust_Account.h"
 #include "Account_Util.h"
-#include "Account_Util.cpp"
+// #include "Account_Util.cpp" //Old approach
 
 using namespace std;
 
@@ -22,6 +22,15 @@ int main()
 {
     cout.precision(2);
     cout << fixed;
+
+    Checking_Account c;
+    cout << c << endl;
+
+    Savings_Account s{"Frank", 5000, 2.6};
+    cout << s << endl;
+
+    Account *ptr_t = new Trust_Account("Leo", 10000, 2.6);
+    cout << *ptr_t << endl;
 
     // cout << "\n====== Savings Account Class usage ======" << endl;
     // vector<Savings_Account> sv_accounts;
