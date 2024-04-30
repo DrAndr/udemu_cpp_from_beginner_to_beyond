@@ -1,7 +1,7 @@
 /**
  * Section 16
- * Subject: Inheritance
- * Lesson 180 [ Polimorphism ]
+ * Subject: Polimorphism
+ * Lesson 192 [ Challenge ]
  * 
  * Description.txt
  *
