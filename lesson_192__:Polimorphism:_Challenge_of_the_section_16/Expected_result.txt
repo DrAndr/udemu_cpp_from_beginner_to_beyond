@@ -1,0 +1,110 @@
+[Checking_accoutn: Unnamed Saving Account : 0.00, int rate: 1.50%]; 
+[Saving_accoutn: Frank : 5000.00, int rate: 2.60%]; 
+[Trust_accoutn: Leo : 10000.00, int rate: 2.60%]; 
+
+====== Savings Account Class usage ======
+
+___Account___
+[Saving_accoutn: Unnamed Saving Account : 0.00, int rate: 0.00%]; 
+[Saving_accoutn: Superman : 0.00, int rate: 0.00%]; 
+[Saving_accoutn: Batman : 2000.00, int rate: 0.00%]; 
+[Saving_accoutn: Halk : 5000.00, int rate: 5.00%]; 
+
+___Depositing to Account___
+Deposited 1000.00 to [Saving_accoutn: Unnamed Saving Account : 1000.00, int rate: 0.00%]; 
+Deposited 1000.00 to [Saving_accoutn: Superman : 1000.00, int rate: 0.00%]; 
+Deposited 1000.00 to [Saving_accoutn: Batman : 3000.00, int rate: 0.00%]; 
+Deposited 1000.00 to [Saving_accoutn: Halk : 6050.00, int rate: 5.00%]; 
+
+___Withdrawing from Account___
+Failed Wihdrawal of 2000.00 from [Saving_accoutn: Unnamed Saving Account : 1000.00, int rate: 0.00%]; 
+Failed Wihdrawal of 2000.00 from [Saving_accoutn: Superman : 1000.00, int rate: 0.00%]; 
+Insufficient funds;
+Wihdrew 2000.00 from [Saving_accoutn: Batman : 1000.00, int rate: 0.00%]; 
+Insufficient funds;
+Wihdrew 2000.00 from [Saving_accoutn: Halk : 4050.00, int rate: 5.00%]; 
+
+====== Check_Account Class usage ======
+
+___Account___
+[Checking_accoutn: Unnamed Saving Account : 0.00, int rate: 1.50%]; 
+[Checking_accoutn: Kirk : 0.00, int rate: 1.50%]; 
+[Checking_accoutn: Spock : 2000.00, int rate: 1.50%]; 
+[Checking_accoutn: Bones : 5000.00, int rate: 1.50%]; 
+
+___Depositing to Account___
+Deposited 1000.00 to [Checking_accoutn: Unnamed Saving Account : 1000.00, int rate: 1.50%]; 
+Deposited 1000.00 to [Checking_accoutn: Kirk : 1000.00, int rate: 1.50%]; 
+Deposited 1000.00 to [Checking_accoutn: Spock : 3000.00, int rate: 1.50%]; 
+Deposited 1000.00 to [Checking_accoutn: Bones : 6000.00, int rate: 1.50%]; 
+
+___Withdrawing from Account___
+Failed Wihdrawal of 2000.00 from [Checking_accoutn: Unnamed Saving Account : 1000.00, int rate: 1.50%]; 
+Failed Wihdrawal of 2000.00 from [Checking_accoutn: Kirk : 1000.00, int rate: 1.50%]; 
+Insufficient funds;
+Wihdrew 2000.00 from [Checking_accoutn: Spock : 998.50, int rate: 1.50%]; 
+Insufficient funds;
+Wihdrew 2000.00 from [Checking_accoutn: Bones : 3998.50, int rate: 1.50%]; 
+
+====== Trust_Account Class usage ======
+
+___Account___
+[Trust_accoutn: Unnamed Saving Account : 0.00, int rate: 0.00%]; 
+[Trust_accoutn: Athos : 10000.00, int rate: 5.00%]; 
+[Trust_accoutn: Portohos : 20000.00, int rate: 4.00%]; 
+[Trust_accoutn: Aramis : 30000.00, int rate: 0.00%]; 
+
+___Depositing to Account___
+Deposited 1000.00 to [Trust_accoutn: Unnamed Saving Account : 1000.00, int rate: 0.00%]; 
+Deposited 1000.00 to [Trust_accoutn: Athos : 11050.00, int rate: 5.00%]; 
+Deposited 1000.00 to [Trust_accoutn: Portohos : 21040.00, int rate: 4.00%]; 
+Deposited 1000.00 to [Trust_accoutn: Aramis : 31000.00, int rate: 0.00%]; 
+
+___Withdrawing from Account___
+Failed Wihdrawal of 3000.00 from [Trust_accoutn: Unnamed Saving Account : 1000.00, int rate: 0.00%]; 
+Failed Wihdrawal of 3000.00 from [Trust_accoutn: Athos : 11050.00, int rate: 5.00%]; 
+Insufficient funds;
+Wihdrew 3000.00 from [Trust_accoutn: Portohos : 18040.00, int rate: 4.00%]; 
+Insufficient funds;
+Wihdrew 3000.00 from [Trust_accoutn: Aramis : 28000.00, int rate: 0.00%]; 
+
+====== Trust_Account withdraw 5 times ======
+
+___Withdrawing from Account___
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Unnamed Saving Account : 1000.00, int rate: 0.00%]; 
+Insufficient funds;
+Wihdrew 1000.00 from [Trust_accoutn: Athos : 10050.00, int rate: 5.00%]; 
+Insufficient funds;
+Wihdrew 1000.00 from [Trust_accoutn: Portohos : 17040.00, int rate: 4.00%]; 
+Insufficient funds;
+Wihdrew 1000.00 from [Trust_accoutn: Aramis : 27000.00, int rate: 0.00%]; 
+
+___Withdrawing from Account___
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Unnamed Saving Account : 1000.00, int rate: 0.00%]; 
+Insufficient funds;
+Wihdrew 1000.00 from [Trust_accoutn: Athos : 9050.00, int rate: 5.00%]; 
+Insufficient funds;
+Wihdrew 1000.00 from [Trust_accoutn: Portohos : 16040.00, int rate: 4.00%]; 
+Insufficient funds;
+Wihdrew 1000.00 from [Trust_accoutn: Aramis : 26000.00, int rate: 0.00%]; 
+
+___Withdrawing from Account___
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Unnamed Saving Account : 1000.00, int rate: 0.00%]; 
+Insufficient funds;
+Wihdrew 1000.00 from [Trust_accoutn: Athos : 8050.00, int rate: 5.00%]; 
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Portohos : 16040.00, int rate: 4.00%]; 
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Aramis : 26000.00, int rate: 0.00%]; 
+
+___Withdrawing from Account___
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Unnamed Saving Account : 1000.00, int rate: 0.00%]; 
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Athos : 8050.00, int rate: 5.00%]; 
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Portohos : 16040.00, int rate: 4.00%]; 
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Aramis : 26000.00, int rate: 0.00%]; 
+
+___Withdrawing from Account___
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Unnamed Saving Account : 1000.00, int rate: 0.00%]; 
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Athos : 8050.00, int rate: 5.00%]; 
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Portohos : 16040.00, int rate: 4.00%]; 
+Failed Wihdrawal of 1000.00 from [Trust_accoutn: Aramis : 26000.00, int rate: 0.00%]; 
+
+-= END =-
