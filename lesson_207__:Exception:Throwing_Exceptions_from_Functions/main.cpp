@@ -1,20 +1,19 @@
 /**
  * Section 18
  * Subject: Excaptions Handling
- * Lesson 206 [ Basic Concepts and Simple Example: Dividing by Zero ]
+ * Lesson 207 [ Throwing Exceptions from Functions ]
  *
  * Expected result 1:
-        Enter 'Sum' value: 7
+        Enter 'Sum' value: 5
         Enter 'Total' value: 0
-        catch (int &e)... e = 0
         ERROR: Can't Devide by zero!
         Part after try/catch()
 
         -= END =-
 Expected result 2:
-        Enter 'Sum' value: 456
-        Enter 'Total' value: 234
-        sum / total = avg | 456 / 234 = 1.94872
+        Enter 'Sum' value: 5
+        Enter 'Total' value: 5
+        sum / total = avg | 5 / 5 = 1
         Part after try/catch()
 
         -= END =-
@@ -23,6 +22,14 @@ Expected result 2:
 #include <iostream>
 
 using namespace std;
+
+double get_avg(int sum, int total)
+{
+    if (total == 0)
+        throw 0;
+
+    return static_cast<double>(sum) / total;
+}
 
 int main()
 {
@@ -38,15 +45,11 @@ int main()
 
     try
     {
-        if (total == 0)
-            throw 0;
-
-        avg = static_cast<double>(sum) / static_cast<double>(total);
+        avg = get_avg(sum, total);
         cout << "sum / total = avg | " << sum << " / " << total << " = " << avg << endl;
     }
     catch (int &e)
     {
-        cerr << "catch (int &e)... e = " << e << endl;
         cerr << "ERROR: Can't Devide by zero!" << endl;
     }
 
