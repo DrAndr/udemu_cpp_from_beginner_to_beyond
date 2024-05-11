@@ -33,8 +33,7 @@ int main()
     std::string source_line;
     while (std::getline(source_file, source_line))
     {
-        if (source_line.length() > 0)
-            counter++;
+        counter++;
         output_file << std::setfill('_');
         output_file << std::setw(5) << std::left << counter << source_line << std::endl;
     }
