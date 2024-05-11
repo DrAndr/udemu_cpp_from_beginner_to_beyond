@@ -1,7 +1,7 @@
 /**
  * Section 19
  * Subject: I/O And Streams
- * Lesson 229 [ Writing to a text file ]
+ * Lesson 232 [ Writing to a text file ]
  *
  * Expected result:
         1 write user content to the output.txt
