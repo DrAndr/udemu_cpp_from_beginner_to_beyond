@@ -27,7 +27,17 @@
 
                 ========= Displaing objects =========
                 display("My name is ", p3);
-                My name is , Batman
+                He name is , Batman
+
+                ========= Swaping =========
+                x = 100 | y = 500
+
+                my_swap(x, y);
+                x = 500 | y = 100
+
+                display(p1, p2) = Batman, Flash
+                my_swap(p1, p2);
+                display(p1, p2) = Flash, Batman
  */
 
 #include <iostream>
@@ -53,6 +63,14 @@ std::ostream &operator<<(std::ostream &os, const Person &p)
 {
     os << p.name;
     return os;
+}
+
+template <typename T>
+void my_swap(T &a, T &b)
+{
+    T temp = a;
+    a = b;
+    b = temp;
 }
 
 int main()
@@ -93,7 +111,24 @@ int main()
     std::cout << "\n========= Displaing objects =========" << std::endl;
 
     std::cout << "display(\"My name is \", p3);" << std::endl;
-    display("My name is ", p3);
+    display("He name is ", p3);
+
+    std::cout << "\n========= Swaping =========" << std::endl;
+
+    int x{100};
+    int y{500};
+
+    std::cout << "x = " << x << " | " << "y = " << y << std::endl;
+    std::cout << "\nmy_swap(x, y);" << std::endl;
+    my_swap(x, y);
+    std::cout << "x = " << x << " | " << "y = " << y << std::endl;
+
+    std::cout << "\ndisplay(p1, p2) = ";
+    display(p1, p2);
+    std::cout << "my_swap(p1, p2);" << std::endl;
+    my_swap(p1, p2);
+    std::cout << "display(p1, p2) = ";
+    display(p1, p2);
 
     std::cout << std::endl;
     return 0;
