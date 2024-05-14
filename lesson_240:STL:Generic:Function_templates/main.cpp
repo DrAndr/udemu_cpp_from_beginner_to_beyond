@@ -4,26 +4,30 @@
  * Lesson 240 [ Function templates ]
  *
  * Expected result:
-========= Compare objects =========
-                    Person p1{"Batman", 35};
-                    Person p2{"Flash", 25};
-                    Person p3 = max(p1, p2);
-                    p3 = Batman
+                ========= template <typename T> =========
+                ========= T max(T a, T b) { return (a > b) ? a : b; } =========
+                max<int>(3, 7) = 7
+                max(3, 7) = 7
+                max('A', 'X') = X
+                max(157.21, 88.43) = 157.21
+                max(5 + 2 * 8, 6 + 9 * 3) = 33
 
-                    ========= template <typename T> =========
-                    ========= T max(T a, T b) { return (a > b) ? a : b; } =========
-                    max<int>(3, 7) = 7
-                    max(3, 7) = 7
-                    max('A', 'X') = X
-                    max(157.21, 88.43) = 157.21
-                    max(5 + 2 * 8, 6 + 9 * 3) = 33
+                ========= template <typename T1, typename T2> =========
+                display<int,int>(10,20) = 10, 20
+                display(10,20) = 10, 20
+                display('F','D') = F, D
+                display(44, 44.1) = 44, 44.1
+                display('L', 15.5) = L, 15.5
 
-                    ========= template <typename T1, typename T2> =========
-                    display<int,int>(10,20) = 10, 20
-                    display(10,20) = 10, 20
-                    display('F','D') = F, D
-                    display(44, 44.1) = 44, 44.1
-                    display('L', 15.5) = L, 15.5
+                ========= Compare objects =========
+                Person p1{"Batman", 35};
+                Person p2{"Flash", 25};
+                Person p3 = max(p1, p2);
+                p3 = Batman
+
+                ========= Displaing objects =========
+                display("My name is ", p3);
+                My name is , Batman
  */
 
 #include <iostream>
@@ -42,22 +46,17 @@ struct Person
     std::string name;
     int age;
 
-    bool operator>(const Person &rhs) const { return this->age > rhs.age; }
+    bool operator>(const Person &rhs) const { return this->age > rhs.age; };
 };
+
+std::ostream &operator<<(std::ostream &os, const Person &p)
+{
+    os << p.name;
+    return os;
+}
 
 int main()
 {
-    std::cout << "\n========= Compare objects =========" << std::endl;
-
-    Person p1{"Batman", 35};
-    Person p2{"Flash", 25};
-
-    std::cout << "Person p1{\"Batman\", 35};" << std::endl;
-    std::cout << "Person p2{\"Flash\", 25};" << std::endl;
-    std::cout << "Person p3 = max(p1, p2);" << std::endl;
-    Person p3 = max(p1, p2);
-    std::cout << "p3 = " << p3.name << std::endl;
-
     std::cout << "\n========= template <typename T> =========" << std::endl;
     std::cout << "========= T max(T a, T b) { return (a > b) ? a : b; } =========" << std::endl;
 
@@ -79,6 +78,22 @@ int main()
     display(44, 44.1);
     std::cout << "display('L', 15.5) = ";
     display('L', 15.5);
+
+    std::cout << "\n========= Compare objects =========" << std::endl;
+
+    Person p1{"Batman", 35};
+    Person p2{"Flash", 25};
+
+    std::cout << "Person p1{\"Batman\", 35};" << std::endl;
+    std::cout << "Person p2{\"Flash\", 25};" << std::endl;
+    std::cout << "Person p3 = max(p1, p2);" << std::endl;
+    Person p3 = max(p1, p2);
+    std::cout << "p3 = " << p3.name << std::endl;
+
+    std::cout << "\n========= Displaing objects =========" << std::endl;
+
+    std::cout << "display(\"My name is \", p3);" << std::endl;
+    display("My name is ", p3);
 
     std::cout << std::endl;
     return 0;
